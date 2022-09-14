@@ -76,7 +76,6 @@ Architectural Patterns Styles
 
   Layer ที่ติดต่อกับผู้ใช้งาน(GUI) คือ Lib wxWidgets ส่วน GUI ถูกแบ่งออกมาหลายๆส่วน เช่น Blockfiles, ShuttleGUI โดยในส่วนนี้ทำหน้าที่รับคำสั่งและแสดงผลต่อผู้ใช่งาน
   Layer ส่วนที่ติดต่อกับ Hardware ใช้ Lib PortAudioโดยในส่วนนี้ทำหน้าที่ติดต่อกับระบบปฏิบัติการ(OS)เพื่อใช้งาน(Interface)ต่างๆของHardwawre
-
     ![image](https://user-images.githubusercontent.com/69455513/190145210-e7360fdc-76dd-453e-b1c8-72120e890454.png)
 
 ```
@@ -87,4 +86,21 @@ Stimulus:          Learn to use
 Environment:       Run Time
 Response:          Help facilitate
 Response Measure:  Satisfaction
+```
+```
+    - Integrability
+Source:            User
+Stimulus:          Want to add a plugin to Audacity?
+Environment:       Deployment, Deployment, Runtime, Integration)
+Response:          New Configuration
+Response Measure:  There is a new plugin.
+```
+```
+Quality Attribute Scenarios 
+    - Performance
+Source:            Hacker
+Stimulus:          Insecure libraries
+Environment:       Plugin Online
+Response:          Data, Resource
+Response Measure:  Intrustion detection devices
 ```

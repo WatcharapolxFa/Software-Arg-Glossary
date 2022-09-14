@@ -74,8 +74,17 @@ Response measure:  Path coverage of 85% is achieved within three hours
 ```
 Architectural Patterns Styles
 
-  Layer ส่วนที่ติดต่อกับผู้ใช้งาน (GUI) ใช้ Lib wxWidgets (GUI components in a cross-platform way) โดยในส่วน GUI ถูกแบ่งออกมาหลายๆส่วน เช่น Blockfiles, ShuttleGUI โดยในส่วนนี้ทำหน้าที่รับคำสั่งและแสดงผลต่อผู้ใช่งาน
+  Layer ที่ติดต่อกับผู้ใช้งาน(GUI) คือ Lib wxWidgets ส่วน GUI ถูกแบ่งออกมาหลายๆส่วน เช่น Blockfiles, ShuttleGUI โดยในส่วนนี้ทำหน้าที่รับคำสั่งและแสดงผลต่อผู้ใช่งาน
+  Layer ส่วนที่ติดต่อกับ Hardware ใช้ Lib PortAudioโดยในส่วนนี้ทำหน้าที่ติดต่อกับระบบปฏิบัติการ(OS)เพื่อใช้งาน(Interface)ต่างๆของHardwawre
 
-Layer ส่วนที่ติดต่อกับ Hardware ใช้ Lib PortAudio (provides a low-level audio interface in a cross-platform way) โดยในส่วนนี้ทำหน้าที่ติดต่อกับ OS เพื่อใช้งาน Interface ต่างๆของ Hardwawre
     ![image](https://user-images.githubusercontent.com/69455513/190145210-e7360fdc-76dd-453e-b1c8-72120e890454.png)
 
+```
+Quality Attribute Scenarios 
+    - Usability
+Source:            User
+Stimulus:          Learn to use
+Environment:       Run Time
+Response:          Help facilitate
+Response Measure:  Satisfaction
+```

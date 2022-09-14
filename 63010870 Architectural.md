@@ -104,3 +104,57 @@ Environment:       Plugin Online
 Response:          Data, Resource
 Response Measure:  Intrustion detection devices
 ```
+- Jitsi
+  Jitsi เป็นแอปพลิเคชั่นที่ช่วยให้ผู้คนสามารถโทรผ่านวิดีโอและสนทนา แชร์เดสก์ท็อป และแลกเปลี่ยน ไฟล์และข้อความ ที่สําคัญกว่านั้นคืออนุญาตให้ผู้คนทําสิ่งนี้ผ่านโปรโตคอลต่างๆ ตั้งแต่ XMPP มาตรฐาน (Extensible Messaging and Presence Protocol) และ SIP (Session Initiation Protocol) ไปจนถึงกรรมสิทธิ์ เช่นYahoo!และWindowsLiveMessenger(MSN) ซึ่งJitsiสามารถทํางานบน Windows,Mac OS, Linux และ FreeBSD ส่วนใหญ่เขียนด้วยภาษา Java แต่ก็มีส่วนที่เขียนด้วย native code
+  
+```
+วัตถุประสงค์
+
+- เพื่อ Video Conference , Text Chat , Sip call ได้
+
+- สนทนาได้หลายคนและสามารถบันทึกภาพและเสียงในการสนทนาได้
+
+```
+Attribute Scenarios 
+
+ รูปแบบสถาปัตยกรรมที่ Jitsi ใช้คือรูปแบบ Layer architectural
+ 
+- แอปพลิเคชัน JavaScript ที่เข้ากันได้กับ Jitsi Meet WebRTC ซึ่งใช้ Jitsi Videobridge เพื่อจัดการประชุมทางวิดีโอคุณภาพสูงและปรับขนาดได้ สร้างจาก React และ React Native
+
+- Jitsi Videobridge (jvb) เซิร์ฟเวอร์ที่เข้ากันได้กับ WebRTC ออกแบบมาเพื่อกำหนดเส้นทางสตรีมวิดีโอระหว่างผู้เข้าร่วมในการประชุม
+
+- คอมโพเนนต์โฟกัสฝั่งเซิร์ฟเวอร์ Jitsi Conference Focus (jicofo) ที่ใช้ในการประชุม Jitsi Meet ที่จัดการเซสชันสื่อระหว่างผู้เข้าร่วมแต่ละคนและสะพานวิดีโอ
+
+- Jitsi Gateway to SIP (jigasi) แอปพลิเคชันฝั่งเซิร์ฟเวอร์ที่อนุญาตให้ไคลเอ็นต์ SIP ปกติเข้าร่วมการประชุม Jitsi Meet
+
+- เครื่องมือ Jitsi Broadcasting Infrastructure (jibri) สำหรับบันทึกและ/หรือสตรีมการประชุม Jitsi Meet ที่ทำงานโดยเปิดใช้อินสแตนซ์ Chrome ที่แสดงผลในเฟรมบัฟเฟอร์เสมือน และบันทึกและเข้ารหัสเอาต์พุตด้วย ffmpeg
+![image](https://user-images.githubusercontent.com/69455513/190150300-cdba8c7a-401a-411d-881e-f8393b437085.png)
+
+```
+Quality Attribute Scenarios 
+    - Usability
+Source:            User
+Stimulus:          User system efficiently
+Artifact:          System
+Environment:       Runtime
+Response:          Wishes to record audio and video
+Response Measure:  Video and audio recording takes less than a second
+```
+```
+    - Modifiability
+Source:            Developer
+Stimulus:          Wishes to add screen sharing function
+Artifact:          Code
+Environment:       Development time 
+Response:          Modifications were made without side effects
+Response Measure:  In Six hours
+```
+```
+    - Performance
+Source:            IOS
+Stimulus:          Wishes to run on ios
+Artifact:          Resource
+Environment:       Runtime
+Response:          Can run on IOS without error occurs
+Response Measure:  In 30 minutes
+```

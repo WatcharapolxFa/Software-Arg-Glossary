@@ -10,7 +10,7 @@
 วัตถุประสงค์
 
     - เพื่อให้สามารถสร้างพล็อตที่มีคุณภาพที่มีความง่ายและความสะดวกมากยิ่งขึ้น 
-    - เพื่อแสดงภาพแบบคงที่และแบบเคลื่อนไหวด้วยภาษา Pyton
+    - เพื่อแสดงภาพแบบคงที่และแบบเคลื่อนไหวด้วยภาษา Python
 
 Architectural Patterns Styles
     รูปแบบสถาปัตยกรรมที่ Matplotlib ใช้คือ Layer architectural มีทั้งหมด 3 Layer
@@ -33,7 +33,7 @@ Architectural Patterns Styles
 ```
 ```
 Quality Attribute Scenarios 
-- Modifiability
+    - Modifiability
 Source:            Developer
 Stimulus:          Wishes to modify 3D function
 Artifact:          Code
@@ -41,4 +41,21 @@ Environment:       Development Time
 Response:          Modification is made with no side effects
 Response measure:  In Three hours
 ```
-
+```
+    - Portability
+Source:            OS
+Stimulus:          Wishes to run on another OS
+Artifact:          Resource
+Environment:       Runtime
+Response:          Can run without error occurs
+Response measure:  In 30 minutes
+```
+```
+    - Testability
+Source:            Tester
+Stimulus:          Prefoms end to end test
+Artifact:          Complete application
+Environment:       At deployment time
+Response:          Perform a test sequence
+Response measure:  Path coverage of 85% is achieved within three hours
+```
